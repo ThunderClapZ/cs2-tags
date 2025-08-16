@@ -15,7 +15,7 @@
 
 	<Target Name="PostBuild" AfterTargets="Build">
 		<ItemGroup>
-			<FilesToCopy Include="$(ProjectDir)..\cs2-tags-example.toml" />
+			<FilesToCopy Include="$(ProjectDir)..\cs2-tags.toml" />
 		</ItemGroup>
 		<ItemGroup>
 			<FilesToDelete Include="$(OutputPath)TagsApi.dll" />

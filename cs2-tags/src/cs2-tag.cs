@@ -159,7 +159,15 @@ public class Tags : BasePlugin, IPluginConfig<Config>
         if (hookResult >= HookResult.Handled)
             return hookResult;
 
-        um.SetString("messagename", $"{messageProcess.PlayerName}{ChatColors.White}: {messageProcess.Message}");
+        string finalMessage = $"{messageProcess.PlayerName}{ChatColors.White}: {messageProcess.Message}";
+        const int MAX_SAFE_LENGTH = 250;
+        if (finalMessage.Length > MAX_SAFE_LENGTH)
+        {
+            finalMessage = finalMessage.Substring(0, MAX_SAFE_LENGTH);
+        }
+        
+        um.SetString("messagename", finalMessage);
+    
         um.SetBool("chat", playerData.ChatSound);
 
         Api.MessageProcessPost(messageProcess);

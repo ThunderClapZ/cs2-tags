@@ -7,7 +7,7 @@ on:
     paths-ignore:
       - 'README.md'
       - '.github/workflows/**'
-      - 'cs2-tags-example.toml'
+      - 'cs2-tags.toml'
       - 'cs2-tags-api-test/**'
 
 jobs:
