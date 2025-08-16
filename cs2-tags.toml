@@ -1,0 +1,18 @@
+[Settings]
+Tag = ""
+DeadName = "☠"
+NoneName = "(无)"
+SpecName = "(观)"
+TName = "(T)"
+CTName = "(CT)"
+
+[Commands]
+TagsReload = [ "css_tags_reload" ]
+Visibility = [ "css_toggletags", "css_visibility" ]
+
+[Default]
+ScoreTag = ""
+ChatTag = ""
+ChatColor = ""
+NameColor = ""
+ChatSound = true
